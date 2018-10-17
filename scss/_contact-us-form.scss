@@ -1,54 +1,60 @@
-.card {
-    border: 0 !important;
-}
+// #contact-btn {
+//     position: fixed;
+//     width: auto;
+//     bottom: 20px;
+//     right: 20px;
+//     background: #30aad2;
+//     z-index: 1000;
+//     left: auto;
+//     padding: 10px 25px;
+//     color: white;
+//     display: none;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
 
-#contact-btn {
-    position: fixed;
-    width: auto;
-    bottom: 20px;
-    right: 20px;
-    background: #30aad2;
-    z-index: 1000;
-    left: auto;
-    padding: 10px 25px;
-    color: white;
-    display: none;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+// #contact-form {
+//     background-color: white;
+//     border-radius: 5px 5px 0 0;
+//     position: fixed;
+//     width: 340px;
+//     bottom: 0;
+//     right: 20px;
+//     z-index: 2000;
+//     left: auto;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//     display: none;
+// }
 
-#contact-form {
-    background-color: white;
-    border-radius: 5px 5px 0 0;
-    position: fixed;
-    width: 340px;
-    bottom: 0;
-    right: 20px;
-    z-index: 2000;
-    left: auto;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: none;
-}
+// @media (max-width: 746px) {
+//     #contact-form {
+//       height: 100vh;
+//       width: 100%;
+//       right: 0;
+//     }
+//   }
 
-#sendContactButton {
-    text-transform: none !important;
-    background: #30aad2;
-    color: white;
-    width: 100%;
-}
+// #close-contact {
+//     position: fixed;
+//     width: auto;
+//     bottom: 20px;
+//     right: 20px;
+//     background: $primary;
+//     z-index: 1000;
+//     left: auto;
+//     padding: 10px 25px;
+//     color: white;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
 
-.form-container {
-    padding: 10px;
-}
-
-.card-header {
-    background-color: #30aad2 !important;
-    color: white;
-}
-
-@media (max-width: $break-xs-max) {
-    #contact-form {
-        height: 100vh;
-        width: 100%;
-        right: 0;
-    }
-} 
+// #contact-form {
+//     background-color: white;
+//     border-radius: 5px 5px 0 0;
+//     position: fixed;
+//     width: 340px;
+//     bottom: 0;
+//     right: 20px;
+//     z-index: 2000;
+//     left: auto;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//     display: none;
+// }

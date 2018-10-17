@@ -1,176 +1,132 @@
 @import 'variables.scss';
-@import '.contact-us-form.scss';
+@import 'msg.scss';
+@import 'spinner.scss';
+@import 'new-custom-chat.scss';
 
-    /* intercom */
-    .card {
-        margin: 15px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        border: none !important;
-        border-top: 0.25rem solid #30aad2 !important;
-      }
+/* intercom */
+.card {
+    margin: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none !important;
+    border-top: 0.25rem solid $primary !important;
+}
       
-      #contact-btn {
-        position: fixed;
-        width: auto;
-        bottom: 20px;
-        right: 20px;
-        background: #30aad2;
-        z-index: 1000;
-        left: auto;
-        padding: 10px 25px;
-        color: white;
-        display: none;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      }
-      
-      #contact-form-container {
-        background-color: white;
-        border-radius: 5px 5px 0 0;
-        position: fixed;
-        width: 400px;
-        bottom: 80px;
-        right: 20px;
-        z-index: 2000;
-        left: auto;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        display: none;
-      }
+//   #contact-form-container {
+//     background-color: white;
+//     border-radius: 5px 5px 0 0;
+//     position: fixed;
+//     width: 400px;
+//     bottom: 80px;
+//     right: 20px;
+//     z-index: 2000;
+//     left: auto;
+//     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+//     display: none;
+//   }
     
-      #contact-form-inner {
-        height: calc(100vh - 100px);
-        overflow-y: auto;
-      } 
-      
-      #sendContactButton {
-        text-transform: none !important;
-        background: #30aad2;
-        color: white;
-        width: 100%;
-      }
-      
-      .form-container {
-        padding: 10px;
-      }
-      
-      .card-header {
-        background: -webkit-gradient(linear, right top, left top, from(#095580), to(#30aad2));
-        background: linear-gradient(to left, #095580, #30aad2);
-        color: white;
-        min-height: 75px;
-      }
-      
-      @media (max-width: 746px) {
-        #contact-form {
-          height: 100vh;
-          width: 100%;
-          right: 0;
-        }
-      }
-    
-      #close-contact {
-        position: fixed;
-        width: auto;
-        bottom: 20px;
-        right: 20px;
-        background: #30aad2;
-        z-index: 1000;
-        left: auto;
-        padding: 10px 25px;
-        color: white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      }
-    
-      .card-img{
-          padding: 5px 0;
-      }
-    
-      .btn {
-        background-color: #30aad2;
-        color: white;
-        // border-radius: .5rem !important;
-      }
-    
-      .clickable-area {
-          text-decoration: none;
-          color: black;
-          padding: 15px;
-          border-top: 1px solid #ccc;
-      }
-    
-      .clickable-area:hover {
-        background-color: rgb(245, 245, 245);
-        text-decoration: none;
-        color: black;
-      }
-    
-      .card-inner {
-          padding: 15px;
-      }
-    
-      .card-icon {
-          color: #30aad2;
-      }
-    
-      .btn-full {
-          background-color: #30aad2;
-          width: 100%;
-      }
-    
-      .btn-full:hover {
-        background-color: #095580;
-    }
-    
-    .btn-outline {
-        border: 1px solid #30aad2 !important;
-        background-color: white;
-        color: #30aad2;
-    }
-    
-    .btn-outline:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    
-    .avatar-img {
-        border-radius: 50%;
-        width: 32px;
-        height: 32px;
-    }
-    
-    #interactiveChat {
-        position: fixed;
-        width: 400px;
-        bottom: 80px;
-        right: 20px;
-        z-index: 2000;
-        left: auto;
-    }
-    
-    .comment {
-        background-color: white;
-        margin-left: 10px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        width: 89%;
-        float: right;
-        padding: 10px;
-    }
-    
-    #closeChat {
-        display: none;
-        background-color: gray;
-        color: white;
-        border-radius: 50%;
-        float: right;
-    }
-    
+#contact-form-inner {
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+} 
+
+#sendContactButton {
+    text-transform: none !important;
+    background: $primary;
+    color: white;
+    width: 100%;
+}
+
+.form-container {
+    padding: 10px;
+}
+
+.card-header {
+    background-color: $primary !important;
+    color: white;
+    min-height: 75px;
+}
+
+.card-img {
+    padding: 5px 0;
+}
+
+.btn {
+    background-color: $primary;
+    color: white;
+}
+
+.clickable-area {
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    border-top: 1px solid #ccc;
+}
+
+.clickable-area:hover {
+    background-color: rgb(245, 245, 245);
+    text-decoration: none;
+    color: black;
+}
+
+.card-inner {
+    padding: 15px;
+}
+
+.card-icon {
+    color: $primary;
+}
+
+.btn-full {
+    background-color: $primary;
+    width: 100%;
+}
+
+.btn-full:hover {
+    background-color: #095580;
+}
+
+.btn-outline {
+    border: 1px solid $primary !important;
+    background-color: white;
+    color: $primary;
+}
+
+.btn-outline:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.avatar-img {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+}
+
+.form-control {
+    margin-bottom: 5px;
+}
+
+@media (max-width: $break-md-min) {
+
     #contact-form {
-        background-color: white;
-        border-radius: 5px 5px 0 0;
+        height: 100vh;
+        width: 100%;
+        right: 0;
+    }
+    #contact-form-inner {
+        height: 100vh !important;
+    }
+
+    .next_view_angle {
         position: fixed;
-        width: 340px;
-        bottom: 0;
-        right: 20px;
-        z-index: 2000;
-        left: auto;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        display: none;
-      }
+        right: 0;
+        top: 15px;
+        margin: -7px 10px !important;
+    }
+    .mobile-line-block {
+        display: inline-block;
+    }
+    .mobile-inline-flex {
+        display: inline-flex;
+    }
+
+} 

@@ -71,10 +71,10 @@ gulp.task('js:minify', function() {
       './js/*.js',
       '!./js/*.min.js'
     ])
-    .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    // .pipe(uglify())
+    // .pipe(rename({
+    //   suffix: '.min'
+    // }))
     .pipe(gulp.dest('./js'))
     .pipe(browserSync.stream());
 });
