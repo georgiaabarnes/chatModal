@@ -1,15 +1,14 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
-var uglify = require('gulp-uglify');
+const minify = require("gulp-babel-minify");
 var autoprefixer = require('gulp-autoprefixer');
 var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
 
 
-// Copy third party libraries from /node_modules into /vendor
+// Copy third party libraries ccm-from /node_modules into /vendor
 gulp.task('vendor', function() {
 
   // Bootstrap
@@ -71,10 +70,11 @@ gulp.task('js:minify', function() {
       './js/*.js',
       '!./js/*.min.js'
     ])
-    // .pipe(uglify())
-    // .pipe(rename({
-    //   suffix: '.min'
-    // }))
+    .pipe(minify().on('error', function(e){
+      console.log(e);}))
+    .pipe(rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest('./js'))
     .pipe(browserSync.stream());
 });
